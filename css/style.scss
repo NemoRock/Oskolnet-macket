@@ -2,17 +2,60 @@
 // Circe 400 700 regular bold
 @import url('http://fonts.cdnfonts.com/css/circe');
 
-body{
-  display: flex;
-  flex-direction: column;
-  justify-content: stretch;
-  align-items: center;
+//@media (max-width: 1200px){
+//  .frame{
+//    max-width: 970px;
+//  }
+//}
+@media (max-width: 1020px){
+  .frame{
+    max-width: 750px;
+  }
 }
+@media (max-width: 767px){
+  .frame{
+    max-width: none;
+  }
+}
+$minWidth: 320px;
+$maxWidth: 1390;
+$maxWigthFrame: 1390;
+$md1: $maxWigthFrame +12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+
+
+//.wrapper{
+//  width: 100%;
+//  min-height: 100%;
+//  overflow: hidden;
+//  display: flex;
+//  flex-direction: column;
+//  &.loaded{}
+//}
+
+
 .frame{
-  display: flex;
-  max-width: 1380px;
-  justify-content: center;
+  padding: 0 5px;
+  width: 100%;
+  max-width: $maxWigthFrame + px;
+  margin: 0 auto;
+
+  //@media (max-width: $md1+px) {
+  //  max-width: 750px;
+  //}
+  @media (max-width: $md2+px) {
+    max-width: none;
+    padding: 0 10px;
+  }
 }
+.container{
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+
 .circe18{
   a{
     color: #263057;
@@ -38,21 +81,65 @@ body{
 
 
 
-.header__frame{
-  max-height: 146px;
-  width: 100%;
+.header{
 
-.header__head {
+.header__frame{
+
+
+.header__container {
+  height: 146px;
+  padding: 10px 0;
   display: flex;
-  max-width: 1180px;
-  flex: 1 1 auto;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  @media(max-width: $md2+px){
+    height: 76px;
   }
-  .header__buttonopl a{
-    background: #263057;
   }
 }
+  .header__logo{
+    @media(max-width: 1200px){
+      flex: 00 86px;
+      height: 86px;
+      overflow: hidden;
+      img{
+        margin-top: 10px;
+        max-width: 100%;
+      }
+    }
+  }
+
+  .header__button-opl {
+    a {background: #263057;}
+    @media(max-width: $md2+px){
+      display: none;
+    }
+  }
+
+  .header__button-lk{
+    @media(max-width: $md2+px){
+      display: none;
+    }
+  }
+
+  .header__icon-menu{
+      display: none;
+    @media(max-width: $md2+px){
+      display: block;
+    }
+  }
+
+  .header__text{
+  @media(max-width: $md2+px){
+    display: none;
+  }
+}
+
+
+}
+
+
+
 
 .rectangle1__frame{
   max-height: 536px;
