@@ -56,7 +56,18 @@ $md4: 479.98;
   padding: 10px 0;
 }
 
-
+.head{
+  h1{
+    font-family: Circe;
+    font-weight: 700;
+    font-size: 48px;
+    text-align: center;
+    color: #263057;
+    @media (max-width: $md3+px) {
+      font-size: 25px;
+    }
+  }
+}
 .circe18{
   a{
     color: #263057;
@@ -64,6 +75,17 @@ $md4: 479.98;
     font-weight: 400;
     font-size: 18px;
     line-height: 26.53;
+  }
+}
+.circe20{
+  a {
+    font-family: 'Circe';
+    font-weight: 400;
+    font-size: 20px;
+    color: #263057;
+    @media (max-width: $md3+px) {
+      font-size: 14px;
+    }
   }
 }
 .button{
@@ -78,7 +100,6 @@ $md4: 479.98;
     padding: 8px 30px 8px 30px;
   }
 }
-
 
 
 
@@ -255,3 +276,171 @@ $md4: 479.98;
 
 
 }
+
+
+.tariff{
+  .tariff__frame{
+    height: 790px;
+    background: #E5E5E5;
+  }
+
+  .tariff__container{
+    background: white;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+  }
+
+  .tariff__header{
+    padding: 50px 0 25px 0;
+    @media(max-width: $md3+px){
+      padding: 40px 0 10px 0;
+    }
+  }
+
+  .tariff__btn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  .tariff__tariffs{
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media(max-width: $md3+px){
+      height: 110px;
+    }
+    .tariff__link_bold{
+        margin-right: 80px;
+      border-bottom: 2px solid #6984F0;
+      @media(max-width: $md3+px){
+        margin-right: 20px;
+      }
+    }
+    .tariff__link_img{
+      padding-right: 96px;
+      background: url("../img/xit-blue.png") no-repeat;
+      background-position: 87% 0;
+      //@media(max-width: $md3+px){
+      //  padding-right: 20px;
+      //}
+    }
+    .tariff__link_3{
+      margin-right: 40px;
+      @media(max-width: $md3+px){
+        margin-right: 20px;
+      }
+    }
+
+
+  }
+  .tariff__scroll{
+    margin-bottom: 35px;
+    @media(max-width: $md3+px){
+      margin-bottom: 27px;
+    }
+  }
+
+
+}
+
+.cards{
+  display: flex;
+  justify-content: center;
+  padding: 0 40px;
+  margin-bottom: 35px;
+  margin:  0 -10px 35px -10px;
+  @media(max-width: $md3+px){
+    margin:  0 -10px 27px -10px;
+  }
+  .card{
+    height: 323px;
+    width: 20%;
+    .card__line{
+      border-bottom:1px solid rgba(38, 48, 87, 0.2);
+      width: 191px;
+    }
+    padding: 55px 20px 0 20px;
+    //flex: 0 1 20%;
+    //display: flex;
+    //flex-direction: column;
+    //max-height: 228px;
+    //max-width: 323px;
+    //margin: 0 auto;
+    //flex: 0 1 auto;
+  }
+  .card_black{
+    background: linear-gradient(180deg, #273158 0%, #0C244D 100%);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.45);
+    border-radius: 30px;
+    padding: 55px 20px 0 20px;
+    height: 323px;
+    width: 20%;
+    color: white;
+    .card__price{
+       p{color: white;
+         display:inline-block;}
+      h3{color: white;
+        display:inline-block;}
+    }
+    .card__line{
+      border: 1px solid #6984F0;
+    }
+  }
+  .card__head{
+    h3{
+      font-family: 'Circe';
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 44px;
+    }
+  }
+  .card__speed {
+
+      font-family: 'Circe';
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 35px;
+      background: url("../img/blue-speed.png") no-repeat;
+      padding: 0px 0 0px 30px;
+  }
+  .card__info{
+    font-family: 'Circe';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    margin-bottom: 15px;
+  }
+
+  .card__price{
+    h3{
+      font-family: 'Circe';
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 44px;
+      color: #263057;
+      display:inline-block;
+      margin-right: 7px;
+    }
+    p{
+      font-family: 'Circe';
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 140%;
+      color: #263057;
+      display:inline-block;
+    }
+    margin-bottom: 10px;
+  }
+  .card__button{
+    margin: 0 auto;
+  }
+
+}
+
+
+
