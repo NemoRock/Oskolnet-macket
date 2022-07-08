@@ -2,11 +2,7 @@
 // Circe 400 700 regular bold
 @import url('http://fonts.cdnfonts.com/css/circe');
 
-//@media (max-width: 1200px){
-//  .frame{
-//    max-width: 970px;
-//  }
-//}
+
 @media (max-width: 1020px){
   .frame{
     max-width: 750px;
@@ -26,25 +22,11 @@ $md3: 767.98;
 $md4: 479.98;
 
 
-//.wrapper{
-//  width: 100%;
-//  min-height: 100%;
-//  overflow: hidden;
-//  display: flex;
-//  flex-direction: column;
-//  &.loaded{}
-//}
-
-
 .frame{
   padding: 0 5px;
   width: 100%;
   max-width: $maxWigthFrame + px;
   margin: 0 auto;
-
-  //@media (max-width: $md1+px) {
-  //  max-width: 750px;
-  //}
   @media (max-width: $md2+px) {
     max-width: none;
     padding: 0 10px;
@@ -155,8 +137,6 @@ $md4: 479.98;
     display: none;
   }
 }
-
-
 }
 
 
@@ -232,6 +212,8 @@ $md4: 479.98;
         line-height: 55.8px;
         @media(max-width: $md2+px){
           font-size: 40px;
+          line-height: 30px;
+          margin-top: 10px;
         }
 
 
@@ -245,6 +227,7 @@ $md4: 479.98;
         margin-bottom: 30px;
         @media(max-width: $md2+px){
           font-size: 40px;
+          margin-bottom: 20px;
         }
       }
 
@@ -260,12 +243,14 @@ $md4: 479.98;
     }
     .rectangle1__image {
       @media(max-width: $md3+px){
-          flex: 0 0 257px;
           img{
-            width: 100%;
-            height: 257px;
-            //height: 100%;
+            max-height: 357px;
         }
+      }
+      @media(max-width: 500px){
+          img{
+            height: 300px;
+          }
       }
 
     }
@@ -276,7 +261,6 @@ $md4: 479.98;
 
 
 }
-
 
 .tariff{
   .tariff__frame{
@@ -307,16 +291,19 @@ $md4: 479.98;
   }
 
   .tariff__tariffs{
+    flex-wrap: wrap;
     height: 130px;
     display: flex;
     align-items: center;
     justify-content: center;
     @media(max-width: $md3+px){
+      line-height: 20px;
       height: 110px;
     }
     .tariff__link_bold{
         margin-right: 80px;
       border-bottom: 2px solid #6984F0;
+      font-weight: 700;
       @media(max-width: $md3+px){
         margin-right: 20px;
       }
@@ -325,9 +312,10 @@ $md4: 479.98;
       padding-right: 96px;
       background: url("../img/xit-blue.png") no-repeat;
       background-position: 87% 0;
-      //@media(max-width: $md3+px){
-      //  padding-right: 20px;
-      //}
+      @media(max-width: 460px){
+        padding-right: 50px;
+        background-position: 100% 0;
+      }
     }
     .tariff__link_3{
       margin-right: 40px;
@@ -335,7 +323,6 @@ $md4: 479.98;
         margin-right: 20px;
       }
     }
-
 
   }
   .tariff__scroll{
@@ -350,47 +337,58 @@ $md4: 479.98;
 
 .cards{
   display: flex;
-  justify-content: center;
   padding: 0 40px;
   margin-bottom: 35px;
   margin:  0 -10px 35px -10px;
-  @media(max-width: $md3+px){
-    margin:  0 -10px 27px -10px;
+
+  @media(max-width: 1040px){
+    margin:  0 -10px 0px -10px;
+    overflow: auto;
+    padding: 20px 0 27px 0;
   }
+
   .card{
     height: 323px;
     width: 20%;
+    @media(max-width: 900px){
+      min-width: 228px;
+    }
+    @media(max-width: $md3+px){
+      order: 2;
+    }
+
+
     .card__line{
       border-bottom:1px solid rgba(38, 48, 87, 0.2);
-      width: 191px;
+      width: 95%;
+      margin-bottom: 15px;
+      overflow: hidden;
     }
     padding: 55px 20px 0 20px;
-    //flex: 0 1 20%;
-    //display: flex;
-    //flex-direction: column;
-    //max-height: 228px;
-    //max-width: 323px;
-    //margin: 0 auto;
-    //flex: 0 1 auto;
   }
+
   .card_black{
-    background: linear-gradient(180deg, #273158 0%, #0C244D 100%);
+    background: url("../img/white-xit.png") 14% 7% no-repeat, linear-gradient(180deg, #273158 0%, #0C244D 100%);
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.45);
     border-radius: 30px;
-    padding: 55px 20px 0 20px;
-    height: 323px;
-    width: 20%;
     color: white;
+    @media(max-width: $md3+px){
+        order: 1;
+      margin-left: 20px;
+    }
+
+
+
     .card__price{
-       p{color: white;
-         display:inline-block;}
-      h3{color: white;
-        display:inline-block;}
+       p{color: white;}
+      h3{color: white}
     }
     .card__line{
       border: 1px solid #6984F0;
     }
   }
+
+
   .card__head{
     h3{
       font-family: 'Circe';
@@ -400,20 +398,27 @@ $md4: 479.98;
     }
   }
   .card__speed {
-
       font-family: 'Circe';
       font-weight: 700;
       font-size: 24px;
       line-height: 35px;
       background: url("../img/blue-speed.png") no-repeat;
-      padding: 0px 0 0px 30px;
+      padding: 0 0 0 30px;
+    @media(max-width: 970px){
+      padding: 0 0 0 26px;
+      h4{font-size: 22px}
+    }
+    //@media(max-width: 900px){
+    //  padding: 0 0 0 26px;
+    //  h4{font-size: 20px}
+    //}
   }
   .card__info{
     font-family: 'Circe';
     font-weight: 400;
     font-size: 18px;
     line-height: 140%;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
 
   .card__price{
@@ -434,10 +439,20 @@ $md4: 479.98;
       color: #263057;
       display:inline-block;
     }
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
   .card__button{
-    margin: 0 auto;
+    a{
+      font-family: Circe;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 22.11px;
+      color: white;
+      background: #6984F0;
+      border-radius: 30px;
+      padding: 5% 25%;
+    }
+
   }
 
 }
