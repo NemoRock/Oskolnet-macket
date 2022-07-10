@@ -960,11 +960,13 @@ $md4: 479.98;
         margin-bottom: 15px;
       }
       .footer__foot-cookie{
-        flex: 0 1 56%;
+        flex: 0 0 56%;
         order: 3;
         text-align: center;
         font-size: 12px;
         line-height: 140%;
+        padding-bottom: 15px;
+        margin-bottom: -20px;
       }
       .footer__foot-site{
         flex: 0 0 10%;
