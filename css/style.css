@@ -146,6 +146,7 @@ h1, h2, h3, h4, h5, h6 {
   background: #6984F0;
   border-radius: 30px;
   padding: 8px 30px 8px 30px;
+  white-space: nowrap;
 }
 
 .buttonbig a {
